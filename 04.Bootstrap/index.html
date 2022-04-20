@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Hi, This is cloud Page</title>
+        <link href="./bootstrap4/css/bootstrap.min.css " rel="stylesheet" type="text/css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="add_two_numbers.js"></script>
+        <script type="text/javascript" src="what_time_is_it.js"></script>
+    </head>
+
+    <body> 
+        <!-- 네비게이션 영역 -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid container">
+              <a class="navbar-brand" href="./index.html">CloudPage</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./blog_list.html">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./about_me.html">About Me</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+          
+        <!-- 네비게이션 영역 끝 -->
+
+        <div class="container">
+            <h1>첫번째 크기 헤드라인</h1>
+            <h2>두번째 크기 헤드라인</h2>
+            <h3>세번째 크기 헤드라인</h3>
+            <h4>네번째 크기 헤드라인</h4>
+            <h5>네번째 크기 헤드라인</h5>
+
+            <!-- 현재시간 -->
+
+            <button onclick="whatTimeIsIt()">현재시간</button>
+            <hr /> 
+
+            <!-- 계산기 -->
+            <label for="inputA">a</label>
+            <input id="inputA" value=1 onkeyup="doSomething()">
+            <label for="inputB">b</label>
+            <input id="inputB" value=2 onkeyup="doSomething()">
+            <p><span id="valueA">1</span> + <span id="valueB">2</span> = <span id="valueC">3</span>입니다.</p>
+            <!-- 계산기 끝  -->
+
+            
+            <p>문단은 p로씁니다 paragraph의 약자입니다.</p>
+            <a href="https://google.com"> Google로 갑시다!</a>
+            <hr/>
+            <img src="./images/stay_funcky.jpg" width="600px">
+        </div>
+
+    </body>
+</html>
