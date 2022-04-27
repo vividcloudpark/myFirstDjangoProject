@@ -11,6 +11,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/62b2631537.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
@@ -52,14 +54,14 @@
                 {% if post.head_image %}
                 <a href="#!">
                     <figure class="mb-4">
-                        <img class="fuid rounded" src="{{ post.head_image.url }}" alt="{{post}} head_image"/>
+                        <img class="fluid rounded" src="{{ post.head_image.url }}" alt="{{post}} head_image"/>
                     </figure>
                 </a>
                 {% else %}
                 <a href="#!">
                     <figure class="mb-4">
-                        <img class="fuid rounded" src="https://picsum.photos/seed/{{ post.id }}/900/400"
-                         alt="{{post}} head_image"/>
+                        <img class="fluid rounded" src="https://picsum.photos/seed/{{ post.id }}/900/400"
+                             alt="{{post}} head_image"/>
                     </figure>
                 </a>
                 {% endif %}
@@ -67,6 +69,24 @@
                 <section class="mb-5">
                     {{ post.content }}
                 </section>
+                {% if post.file_upload %}
+                <div>
+                    <a href="{{ post.file_upload.url}}" class="btn btn-outline-dar" role="button" download>
+                        Download :
+                        {% if post.get_file_ext == 'csv' %}
+                            <i class="fa-solid fa-file-csv"></i>
+                        {% elif post.get_file_ext == 'xlsx' or post.get_file_ext == 'xls' %}
+                            <i class="fa-solid fa-file-excel"></i>
+                        {% elif post.get_file_ext == 'docx' or post.get_file_ext == 'doc' %}
+                            <i class="fa-solid fa-file-word"></i>
+                        {% else %}
+                            <i class="fa-solid fa-file"></i>
+                        {% endif %}
+                        {{ post.get_file_name }}
+                    </a>
+
+                </div>
+                {% endif %}
             </article>
             <!-- Comments section-->
             <section class="mb-5">
