@@ -9,6 +9,8 @@ class Post(models.Model):
 
     head_image = models.ImageField(upload_to = 'blog/images/%Y/%M/%d/', blank=True)
 
+
+
     def __str__(self):
         return f'[{self.pk}]  {self.title}'
 
