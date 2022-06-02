@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-c0*7k#ajmy(vt5i@a&c0@fp^j=tem)&^$@@3o67v)ak*#!@ssj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["0.0.0.0",
+                "iptime.cloudpark.monster"]
 
 
 # Application definition
